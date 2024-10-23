@@ -5,6 +5,8 @@ import HomeScreen from './screens/HomeScreen';
 import GameScreen from './screens/GameScreen';
 import IndividualScreen from './screens/IndividualScreen';
 import GrupalScreen from './screens/GrupalScreen';
+import TriviaGrupalScreen from './screens/TriviaGrupalScreen';
+import TriviaIndividualScreen from './screens/TriviaIndividualScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -30,6 +32,16 @@ export default function App() {
         <Stack.Screen 
           name="Grupal" 
           component={GrupalScreen} 
+          options={{ headerShown: false }} 
+        />
+        <Stack.Screen 
+          name="TriviaGrupal" 
+          component={TriviaGrupalScreen} 
+          options={{ headerShown: false }} 
+        />
+        <Stack.Screen 
+          name="TriviaIndividual" 
+          component={TriviaIndividualScreen} 
           options={{ headerShown: false }} 
         />
       </Stack.Navigator>

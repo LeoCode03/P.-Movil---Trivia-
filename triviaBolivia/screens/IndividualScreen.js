@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import BackButton from '../components/BackButton';
 import CustomButton from '../components/CustomButton';
 
-export default function IndividualScreen() {
+export default function IndividualScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <BackButton />
@@ -11,7 +11,7 @@ export default function IndividualScreen() {
 
       <CustomButton
         title="COMENZAR"
-        onPress={() => alert('Juego comenzado en modo individual')}
+        onPress={() => navigation.navigate('TriviaIndividual')}
       />
     </View>
   );

@@ -6,7 +6,7 @@ import inicio from '../assets/inicio.png';  // Asegúrate de que la ruta sea cor
 export default function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
-      <Image blurRadius={1} source={inicio} style={styles.image} />
+      <Image source={inicio} style={styles.image} />
       <CustomButton
         title="JUGAR"
         onPress={() => navigation.navigate('Game')}
