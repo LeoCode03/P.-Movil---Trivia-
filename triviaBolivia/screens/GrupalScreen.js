@@ -1,11 +1,18 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import BackButton from '../components/BackButton';
+import CustomButton from '../components/CustomButton';
 
 export default function GrupalScreen() {
   return (
     <View style={styles.container}>
+      <BackButton />
       <Text style={styles.title}>Modo Grupal</Text>
-      {/* Aquí puedes agregar el contenido para el modo grupal */}
+
+      <CustomButton
+        title="COMENZAR"
+        onPress={() => alert('Juego comenzado en modo grupal')}
+      />
     </View>
   );
 }

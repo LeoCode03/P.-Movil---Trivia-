@@ -1,14 +1,16 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
-import inicio from '../assets/inicio.png';  // Cambia la ruta según corresponda a la estructura de tu proyecto
+import { View, Text, Image, StyleSheet } from 'react-native';
+import CustomButton from '../components/CustomButton';
+import inicio from '../assets/inicio.png';  // Asegúrate de que la ruta sea correcta
 
 export default function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Image blurRadius={1} source={inicio} style={styles.image} />
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Game')}>
-        <Text style={styles.buttonText}>JUGAR</Text>
-      </TouchableOpacity>
+      <CustomButton
+        title="JUGAR"
+        onPress={() => navigation.navigate('Game')}
+      />
     </View>
   );
 }
@@ -24,16 +26,5 @@ const styles = StyleSheet.create({
     width: 400,
     height: 400,
     resizeMode: 'contain',
-  },
-  button: {
-    backgroundColor: '#3498db',
-    padding: 15,
-    borderRadius: 10,
-    marginTop: 20,
-  },
-  buttonText: {
-    color: '#fff',
-    fontSize: 18,
-    fontWeight: 'bold',
   },
 });

@@ -1,11 +1,18 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import BackButton from '../components/BackButton';
+import CustomButton from '../components/CustomButton';
 
 export default function IndividualScreen() {
   return (
     <View style={styles.container}>
+      <BackButton />
       <Text style={styles.title}>Modo Individual</Text>
-      {/* Aquí puedes agregar el contenido para el modo individual */}
+
+      <CustomButton
+        title="COMENZAR"
+        onPress={() => alert('Juego comenzado en modo individual')}
+      />
     </View>
   );
 }
