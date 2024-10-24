@@ -1,21 +1,16 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { Text, StyleSheet } from 'react-native';
+import ScreenContainer from '../components/ScreenContainer';
 
 export default function TriviaGrupalScreen() {
   return (
-    <View style={styles.container}>
+    <ScreenContainer title="Trivia Grupal">
       <Text style={styles.text}>Falta programar</Text>
-    </View>
+    </ScreenContainer>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#ECE6D3',
-  },
   text: {
     fontSize: 24,
     fontWeight: 'bold',

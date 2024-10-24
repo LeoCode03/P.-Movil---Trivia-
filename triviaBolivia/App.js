@@ -13,37 +13,18 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen 
-          name="Home" 
-          component={HomeScreen} 
-          options={{ headerShown: false }} 
-        />
-        <Stack.Screen 
-          name="Game" 
-          component={GameScreen} 
-          options={{ headerShown: false }} 
-        />
-        <Stack.Screen 
-          name="Individual" 
-          component={IndividualScreen} 
-          options={{ headerShown: false }} 
-        />
-        <Stack.Screen 
-          name="Grupal" 
-          component={GrupalScreen} 
-          options={{ headerShown: false }} 
-        />
-        <Stack.Screen 
-          name="TriviaGrupal" 
-          component={TriviaGrupalScreen} 
-          options={{ headerShown: false }} 
-        />
-        <Stack.Screen 
-          name="TriviaIndividual" 
-          component={TriviaIndividualScreen} 
-          options={{ headerShown: false }} 
-        />
+      <Stack.Navigator
+        initialRouteName="Home"
+        screenOptions={{
+          headerShown: false, // Definimos el header por defecto para todas las pantallas
+        }}
+      >
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Game" component={GameScreen} />
+        <Stack.Screen name="Individual" component={IndividualScreen} />
+        <Stack.Screen name="Grupal" component={GrupalScreen} />
+        <Stack.Screen name="TriviaGrupal" component={TriviaGrupalScreen} />
+        <Stack.Screen name="TriviaIndividual" component={TriviaIndividualScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

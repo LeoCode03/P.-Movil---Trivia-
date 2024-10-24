@@ -1,25 +1,20 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import BackButton from '../components/BackButton';
+import { StyleSheet } from 'react-native';
+import ScreenContainer from '../components/ScreenContainer';
 import CustomButton from '../components/CustomButton';
 
 export default function GameScreen({ navigation }) {
   return (
-    <View style={styles.container}>
-      <BackButton />
-
-      <Text style={styles.title}>Elige un modo de juego</Text>
-
+    <ScreenContainer title="Elige un modo de juego">
       <CustomButton
         title="INDIVIDUAL"
         onPress={() => navigation.navigate('Individual')}
       />
-
       <CustomButton
         title="GRUPAL"
         onPress={() => navigation.navigate('Grupal')}
       />
-    </View>
+    </ScreenContainer>
   );
 }
 
@@ -29,10 +24,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#ECE6D3',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 30,
   },
 });
